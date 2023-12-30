@@ -1,0 +1,84 @@
+'use client'
+
+import {
+  Box,
+  Flex,
+  Button,
+  HStack,
+  IconButton,
+  useDisclosure,
+  useColorModeValue,
+  Stack,
+  Container,
+} from '@chakra-ui/react'
+import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
+
+interface Props {
+  children: React.ReactNode
+}
+
+const Links = [ { name: 'Work', href: '/' },
+{ name: 'About', href: '/about' },
+{ name: 'Contact', href: '/contact' },]
+
+const NavLink = (props: { href: string; children: React.ReactNode }) => {
+  const { href, children } = props
+
+  return (
+    <Box
+      as="a"
+      px={2}
+      py={1}
+      _hover={{
+        textDecoration: 'none',
+        textColor: useColorModeValue('gray.500', 'gray.700'),
+      }}
+      href={href}>
+      {children}
+    </Box>
+  )
+}
+
+export default function Navbar() {
+  const { isOpen, onOpen, onClose } = useDisclosure()
+
+  return (
+    <>
+      <Box bg={useColorModeValue('white', 'white')} px={{base: '2', md: '2', xl:'20'}} position={'fixed'} width={'100%'} zIndex={'1'} height={{base: '20', md:'100'}}>
+        <Flex h={20} alignItems={'center'} justifyContent={'space-between'} height={{base: '20', md:'100'}}>
+          <IconButton
+            size={'md'}
+            icon={isOpen ? <CloseIcon /> : <HamburgerIcon boxSize={'6'} px={0}/>}
+            aria-label={'Open Menu'}
+            display={{ md: 'none' }}
+            onClick={isOpen ? onClose : onOpen}
+            bg={'none'}
+          />
+         
+          <HStack spacing={8} alignItems={'center'}>
+            <Box>
+                <Button fontSize={{md:'25'}} as={'a'} href="/" variant={'Link'}>HWM</Button>
+            </Box>
+          </HStack> 
+          <HStack fontWeight={'light'} fontSize={'18'} as={'nav'} spacing={4} justifyContent={'end'} display={{ base: 'none', md: 'flex' }} px={{md:'2'}}>
+              {Links.map((link) => (
+                <NavLink key={link.name} href={link.href}>{link.name}</NavLink>
+              ))}
+            </HStack>
+       
+        </Flex>
+                
+        {isOpen ? (
+          
+          <Box pb={4} display={{ md: 'none' }} height={'100vh'} bg={useColorModeValue('white', 'white')}>
+            <Stack as={'nav'} spacing={4}>
+              {Links.map((link) => (
+                <NavLink key={link.name} href={link.href}>{link.name}</NavLink>
+              ))}
+            </Stack>
+          </Box>
+        ) : null}
+      </Box>
+    </>
+  )
+}
