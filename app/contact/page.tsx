@@ -63,7 +63,7 @@ export default function contact() {
                 </Box>
               </WrapItem>
               <WrapItem>
-                <Box>
+                <Box w={{md:'lg'}}>
                   <Box m={8} color="#0B0E3F">
                     <VStack spacing={5}>
                       <FormControl id="name" >

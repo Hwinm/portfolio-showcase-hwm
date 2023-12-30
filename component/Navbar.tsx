@@ -44,7 +44,8 @@ export default function Navbar() {
 
   return (
     <>
-      <Box bg={useColorModeValue('white', 'white')} px={{base: '2', md: '2', xl:'20'}} position={'fixed'} width={'100%'} zIndex={'1'} height={{base: '20', md:'100'}}>
+      <Box bg={useColorModeValue('white', 'white')} position={'fixed'} width={'100%'} zIndex={'1'} height={{base: '20', md:'100'}}>
+        <Container maxW={'7xl'}> 
         <Flex h={20} alignItems={'center'} justifyContent={'space-between'} height={{base: '20', md:'100'}}>
           <IconButton
             size={'md'}
@@ -57,17 +58,17 @@ export default function Navbar() {
          
           <HStack spacing={8} alignItems={'center'}>
             <Box>
-                <Button fontSize={{md:'25'}} as={'a'} href="/" variant={'Link'}>HWM</Button>
+                <Button px={'0'}fontSize={{md:'25'}} as={'a'} href="/" variant={'Link'}>HWM</Button>
             </Box>
           </HStack> 
-          <HStack fontWeight={'light'} fontSize={'18'} as={'nav'} spacing={4} justifyContent={'end'} display={{ base: 'none', md: 'flex' }} px={{md:'2'}}>
+          <HStack fontWeight={'light'} fontSize={'18'} as={'nav'} spacing={4} justifyContent={'end'} display={{ base: 'none', md: 'flex' }} >
               {Links.map((link) => (
                 <NavLink key={link.name} href={link.href}>{link.name}</NavLink>
               ))}
             </HStack>
        
         </Flex>
-                
+           </Container> 
         {isOpen ? (
           
           <Box pb={4} display={{ md: 'none' }} height={'100vh'} bg={useColorModeValue('white', 'white')}>
@@ -77,7 +78,7 @@ export default function Navbar() {
               ))}
             </Stack>
           </Box>
-        ) : null}
+        ) : null}    
       </Box>
     </>
   )
