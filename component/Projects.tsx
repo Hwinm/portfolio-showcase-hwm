@@ -232,7 +232,7 @@ export default function Projects() {
             <Heading
               lineHeight={1.1}
               fontWeight={600}
-              fontSize={{ base: '2xl', sm: '4xl', lg: '5xl' }}>
+              fontSize={{ base: '4xl', sm: '4xl', lg: '5xl' }}>
               HCI Technologies
             </Heading>
           </Box>
