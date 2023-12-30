@@ -21,14 +21,15 @@ export default function HeroSection() {
           as={Box}
           textAlign={'left'}
           spacing={{ base: 8, md: 14 }}
-          py={{ base: 20, md: 36 }}>
+          py={{ base: 20, md: 40 }}>
           <Heading
+           mt={'10'}
             fontWeight={400}
             fontSize={{ base: '4xl', sm: '4xl', md: '6xl' }}
             lineHeight={'110%'}>
           Hi, I’m  <Text as={'span'} color={'blue.600'}>
               Houwin
-            </Text>. I’m a UX/UI designer and Front-end developer. Welcome to my new WIP portfolio.
+            </Text>. I&apos;m a UX/UI designer and Front-end developer. Welcome to my new WIP portfolio.
           </Heading>
           <Text color={'gray.500'}>
            <Text as={'span'} color={'blue.600'}>

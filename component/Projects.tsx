@@ -231,7 +231,7 @@ export default function Projects() {
           <Box as={'header'}>
             <Heading
               lineHeight={1.1}
-              fontWeight={600}
+              fontWeight={400}
               fontSize={{ base: '4xl', sm: '4xl', lg: '5xl' }}>
               HCI Technologies
             </Heading>
