@@ -22,7 +22,7 @@ import { MdLocalShipping } from 'react-icons/md'
 
 export default function Projects() {
   return (
-    <Container maxW={'7xl'}>
+    <Container maxW={'8xl'}>
         {/* //portfolio */}
       <SimpleGrid
         columns={{ base: 1, lg: 1}}
