@@ -63,7 +63,7 @@ export default function contact() {
                 </Box>
               </WrapItem>
               <WrapItem>
-                <Box bg={useColorModeValue('RGBA(0, 0, 0, 0.04)', 'gray.900')} borderRadius={'none'}>
+                <Box>
                   <Box m={8} color="#0B0E3F">
                     <VStack spacing={5}>
                       <FormControl id="name" >

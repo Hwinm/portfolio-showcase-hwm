@@ -59,7 +59,7 @@ export default function Projects() {
             }>
             <VStack spacing={{ base: 4, sm: 6 }} align={'left'}>
               <Text fontSize={'lg'} lineHeight={'10'}>
-              Hi my name is Houwin, and currently, I'm studying Communication and Multimedia Design at The Hague University of Applied Sciences. My interests lie in designing and building interactive digital products. I am someone who enjoys collaborating to receive feedback on what I can improve or what I already excel at, aiming to bring out my best qualities to perform my work optimally. Furthermore, I work diligently to complete my tasks as efficiently and effectively as possible. Additionally, I take pleasure in working with joy.
+              Hi my name is Houwin, and currently, I&apos;m studying Communication and Multimedia Design at The Hague University of Applied Sciences. My interests lie in designing and building interactive digital products. I am someone who enjoys collaborating to receive feedback on what I can improve or what I already excel at, aiming to bring out my best qualities to perform my work optimally. Furthermore, I work diligently to complete my tasks as efficiently and effectively as possible. Additionally, I take pleasure in working with joy.
               </Text>
             </VStack>
 
