@@ -49,7 +49,7 @@ export default function Navbar() {
         <Flex h={20} alignItems={'center'} justifyContent={'space-between'} height={{base: '20', md:'100'}}>
           <IconButton
             size={'md'}
-            icon={isOpen ? <CloseIcon /> : <HamburgerIcon boxSize={'6'} px={0}/>}
+            icon={isOpen ? <CloseIcon boxSize={'5'} /> : <HamburgerIcon boxSize={'8'}/>}
             aria-label={'Open Menu'}
             display={{ md: 'none' }}
             onClick={isOpen ? onClose : onOpen}
@@ -58,7 +58,7 @@ export default function Navbar() {
          
           <HStack spacing={8} alignItems={'center'}>
             <Box>
-                <Button px={'0'}fontSize={{md:'25'}} as={'a'} href="/" variant={'Link'}>HWM</Button>
+                <Button fontWeight={'medium'} px={'0'}fontSize={{base:'25',md:'25'}} as={'a'} href="/" variant={'Link'}>HWM</Button>
             </Box>
           </HStack> 
           <HStack fontWeight={'light'} fontSize={'18'} as={'nav'} spacing={4} justifyContent={'end'} display={{ base: 'none', md: 'flex' }} >
@@ -71,8 +71,8 @@ export default function Navbar() {
            </Container> 
         {isOpen ? (
           
-          <Box pb={4} display={{ md: 'none' }} height={'100vh'} bg={useColorModeValue('white', 'white')}>
-            <Stack as={'nav'} spacing={4}>
+          <Box pb={4} px={'4'}display={{ md: 'none' }} height={'100vh'} bg={useColorModeValue('white', 'white')}>
+            <Stack as={'nav'} spacing={4} fontSize={'30'}>
               {Links.map((link) => (
                 <NavLink key={link.name} href={link.href}>{link.name}</NavLink>
               ))}
