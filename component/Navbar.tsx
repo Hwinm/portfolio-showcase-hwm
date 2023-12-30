@@ -72,7 +72,7 @@ export default function Navbar() {
         {isOpen ? (
           
           <Box pb={4} px={'4'}display={{ md: 'none' }} height={'100vh'} bg={useColorModeValue('white', 'white')}>
-            <Stack as={'nav'} spacing={4} fontSize={'30'}>
+            <Stack as={'nav'} spacing={4} fontSize={'30'} fontWeight={'light'}>
               {Links.map((link) => (
                 <NavLink key={link.name} href={link.href}>{link.name}</NavLink>
               ))}
